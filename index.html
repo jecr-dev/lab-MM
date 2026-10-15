@@ -34,7 +34,7 @@
 <main id="contenido">
 <section id="inicio" class="hero"><div class="container hero__in">
  <div>
-  <h1>Precisión, confianza y calidad para tu práctica odontológica</h1>
+  <h1>Tu aliado en precisión, confianza y calidad dental</h1>
   <p>En Laboratorio Dental MM trabajamos junto a odontólogos y clínicas para entregar soluciones de laboratorio dental con atención personalizada y compromiso con cada caso.</p>
   <div class="actions"><a class="btn" href="#servicios">Conocer nuestros servicios</a><a class="btn btn--ghost" href="#afiliados">Quiero afiliarme</a></div>
   <p><a class="link-light js-wa" href="#contacto" data-msg="Hola, quisiera obtener información sobre los servicios de Laboratorio Dental MM">Escríbenos por WhatsApp →</a></p>
@@ -45,10 +45,10 @@
 
 <section id="nosotros" class="sec"><div class="container">
  <h2>Quiénes somos</h2><p class="lead">Texto provisional: describe aquí, con información confirmada, quiénes son y cómo trabajan con los profesionales odontológicos.</p>
- <div class="grid g4">
+ <div class="grid g3">
   <article class="card"><h3>Nuestra historia</h3><p>[Por completar con datos reales del laboratorio]</p></article>
-  <article class="card"><h3>Misión</h3><p>[Por completar]</p></article>
-  <article class="card"><h3>Visión</h3><p>[Por completar]</p></article>
+  <article class="card"><h3>Misión</h3><p>Entregar soluciones de laboratorio dental con altos estándares de precisión, calidad e innovación, construyendo relaciones de confianza con odontólogos y clínicas dentales mediante un servicio personalizado, compromiso profesional y mejora continua, contribuyendo al éxito de los tratamientos y al bienestar de los pacientes.</p></article>
+  <article class="card"><h3>Visión</h3><p>Convertirnos en la red de referencia en Chile para la colaboración entre laboratorios y clínicas dentales, liderando la transformación tecnológica del sector mediante innovación, integración y excelencia en cada etapa del trabajo odontológico.</p></article>
   <article class="card"><h3>Valores</h3><p>Precisión, responsabilidad, comunicación, calidad y compromiso.</p></article>
  </div>
 </div></section>
@@ -56,9 +56,9 @@
 <section id="servicios" class="sec sec--alt"><div class="container">
  <h2>Servicios</h2><p class="lead">Categorías provisionales: se reemplazarán con el catálogo oficial del laboratorio.</p>
  <div class="grid g4" id="servicios-grid">
-  <article class="card"><span class="tag">Por revisar</span><h3>Prótesis dentales</h3><p>Descripción editable.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por: Prótesis dentales">Consultar por este servicio</a></article>
-  <article class="card"><span class="tag">Por revisar</span><h3>Restauraciones y trabajos protésicos</h3><p>Descripción editable.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por: Restauraciones y trabajos protésicos">Consultar por este servicio</a></article>
-  <article class="card"><span class="tag">Por revisar</span><h3>Soluciones según indicación clínica</h3><p>Descripción editable.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por: Soluciones de laboratorio según indicación clínica">Consultar por este servicio</a></article>
+  <article class="card"><h3>Prótesis dentales</h3><p>Prótesis fijas y removibles.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por: Prótesis dentales">Consultar por este servicio</a></article>
+  <article class="card"><h3>Restauraciones y trabajos protésicos</h3><p>Reparación de prótesis acrílicas y trabajos de restauración, con terminaciones cuidadas para devolver función y estética a tus pacientes.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por: Restauraciones y trabajos protésicos">Consultar por este servicio</a></article>
+  <article class="card"><h3>Soluciones según indicación clínica</h3><p>Aparatos de ortodoncia y otros dispositivos a medida, elaborados según la indicación de cada caso.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por: Soluciones de laboratorio según indicación clínica">Consultar por este servicio</a></article>
   <article class="card"><span class="tag">Por revisar</span><h3>Otros servicios</h3><p>Se incorporarán desde el catálogo oficial.</p><a class="btn btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera consultar por otros servicios del laboratorio">Consultar por este servicio</a></article>
  </div>
 </div></section>
@@ -92,6 +92,15 @@
   <li class="card card--dark">Condiciones comerciales para afiliados [por confirmar].</li>
   <li class="card card--dark">Otros beneficios según el acuerdo [por confirmar].</li>
  </ul>
+ <div class="card card--dark" id="contrato">
+  <h3>Revisa el convenio de afiliación</h3>
+  <p>Descarga o consulta el convenio completo antes de decidir. Si tienes dudas, escríbenos.</p>
+  <div id="contrato-ok" hidden>
+   <div class="actions"><a class="btn" id="contrato-ver" target="_blank" rel="noopener">Ver convenio en PDF</a><a class="btn btn--ghost" id="contrato-dl" download>Descargar convenio</a></div>
+   <object id="contrato-obj" type="application/pdf" class="pdf" aria-label="Vista previa del convenio de afiliación"><p>Tu navegador no muestra la vista previa; usa los botones.</p></object>
+  </div>
+  <p id="contrato-pending" class="notice">El convenio de afiliación está pendiente de incorporación (<code>convenio-afiliado-laboratorio-mm.pdf</code>).</p>
+ </div>
  <form id="afil-form" class="form card" novalidate>
   <h3>Solicitar afiliación</h3>
   <label>Nombre<input name="nombre" required autocomplete="name"></label>

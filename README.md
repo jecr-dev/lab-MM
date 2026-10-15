@@ -36,7 +36,3 @@ assets/docs/ (aquí va el PDF) · assets/icons/ (favicon)
 - [ ] Mapa y “Cómo llegar” con la dirección real.
 - [ ] Nada se desborda horizontalmente en el teléfono; se puede navegar con la tecla Tab.
 - [ ] Prueba la vista previa social pegando la URL en WhatsApp.
-
----
-## Versión plana (sin carpetas)
-Todos los archivos van juntos en la raíz del repositorio (útil si subes desde el teléfono). El PDF del arancel se llama `arancel-laboratorio-mm.pdf` y también va en la raíz.

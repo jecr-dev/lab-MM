@@ -3,10 +3,12 @@ const CONFIG = {
   whatsapp: "",            // Número internacional sin + ni espacios. Ej: "56912345678"
   telefono: "",            // Ej: "+56 9 1234 5678"
   correo: "",              // Ej: "contacto@ejemplo.cl"
-  horario: "",             // Ej: "Lunes a viernes, 9:00 a 18:00"
-  direccion: "",           // Dirección real, para el mapa y "Cómo llegar"
+  horario: "Lunes a viernes: 9:00 a 19:00\nSábado: 10:30 a 14:30\nDomingo: cerrado",
+  direccion: "Maestranza 355, Ovalle, Coquimbo",   // Para el mapa y "Cómo llegar"
+  mapsUrl: "https://maps.app.goo.gl/HJHTBjZ5Jo7Q6NF96",
   arancelFecha: "",        // Ej: "Octubre 2026"
-  arancelPdf: "arancel-laboratorio-mm.pdf"
+  arancelPdf: "arancel-laboratorio-mm.pdf",
+  contratoPdf: "convenio-afiliado-laboratorio-mm.pdf"
 };
 /* ================================================== */
 const $ = (s, r = document) => r.querySelector(s);
@@ -31,18 +33,19 @@ if (CONFIG.telefono) $("#c-tel").innerHTML = `<a href="tel:${CONFIG.telefono.rep
 if (CONFIG.direccion) {
   const q = encodeURIComponent(CONFIG.direccion);
   $("#map-box").innerHTML = `<iframe title="Mapa de ubicación de Laboratorio Dental MM" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${q}&output=embed"></iframe>`;
-  const go = `https://www.google.com/maps/dir/?api=1&destination=${q}`, open = `https://www.google.com/maps/search/?api=1&query=${q}`;
+  const go = `https://www.google.com/maps/dir/?api=1&destination=${q}`, open = CONFIG.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${q}`;
   $("#map-go").href = go; $("#map-open").href = open; $("#foot-map").href = open;
 } else { ["#map-go", "#map-open"].forEach(s => $(s).setAttribute("aria-disabled", "true")); }
 
 // Arancel: muestra botones solo si el PDF existe
 if (CONFIG.arancelFecha) $("#arancel-fecha").textContent = CONFIG.arancelFecha;
-fetch(CONFIG.arancelPdf, { method: "HEAD" }).then(r => {
+const pdfBlock = (p, path) => fetch(path, { method: "HEAD" }).then(r => {
   if (!r.ok) throw 0;
-  $("#arancel-ver").href = $("#arancel-dl").href = CONFIG.arancelPdf;
-  $("#arancel-obj").data = CONFIG.arancelPdf;
-  $("#arancel-ok").hidden = false; $("#arancel-pending").hidden = true;
+  $(`#${p}-ver`).href = $(`#${p}-dl`).href = path;
+  $(`#${p}-obj`).data = path;
+  $(`#${p}-ok`).hidden = false; $(`#${p}-pending`).hidden = true;
 }).catch(() => {});
+pdfBlock("arancel", CONFIG.arancelPdf); pdfBlock("contrato", CONFIG.contratoPdf);
 
 // Menú móvil
 const burger = $(".burger"), menu = $("#menu");
