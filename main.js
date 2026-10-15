@@ -2,7 +2,7 @@
 const CONFIG = {
   whatsapp: "",            // Número internacional sin + ni espacios. Ej: "56912345678"
   telefono: "",            // Ej: "+56 9 1234 5678"
-  correo: "",              // Ej: "contacto@ejemplo.cl"
+  correo: "contacto@labmm.cl",              // Ej: "contacto@ejemplo.cl"
   horario: "Lunes a viernes: 9:00 a 19:00\nSábado: 10:30 a 14:30\nDomingo: cerrado",
   direccion: "Maestranza 355, Ovalle, Coquimbo",   // Para el mapa y "Cómo llegar"
   mapsUrl: "https://maps.app.goo.gl/HJHTBjZ5Jo7Q6NF96",
@@ -72,7 +72,7 @@ $$("[data-send]", form).forEach(b => b.addEventListener("click", () => {
 
 // Vista ampliada de diagramas
 const lb = $("#lightbox"), lbImg = $("#lb-img");
-$$(".zoom").forEach(z => z.addEventListener("click", () => {
+$$(".diagram, .zoom-btn").forEach(z => z.addEventListener("click", () => {
   lbImg.src = z.dataset.src; lbImg.alt = z.dataset.alt; lb.showModal(); $(".close", lb).focus();
 }));
 $(".close", lb).addEventListener("click", () => lb.close());

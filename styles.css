@@ -29,8 +29,7 @@ h1{font-size:clamp(2rem,5vw,3.2rem);color:#fff}h2{font-size:clamp(1.6rem,3.5vw,2
 .card{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-medium);padding:1.5rem;box-shadow:var(--shadow-card)}
 .card--dark{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:#fff;box-shadow:none}
 .tag{display:inline-block;background:#FFF4D6;color:#7a5200;font-size:.75rem;font-weight:600;padding:.15rem .6rem;border-radius:99px;margin-bottom:.6rem}
-.flows{display:grid;gap:1.5rem;margin:1.5rem 0}.zoom{display:block;width:100%;padding:0;background:none;border:1px solid var(--color-border);border-radius:var(--radius-medium);cursor:zoom-in;margin:.8rem 0}
-.scroll{overflow-x:auto}.scroll img{display:block;width:100%;min-width:640px}
+.flows{display:grid;gap:1.5rem;margin:1.5rem 0}
 .form{display:grid;gap:1rem;max-width:640px;color:var(--color-text)}.form h3{color:var(--color-primary-dark)}
 label{display:grid;gap:.3rem;font-weight:600;font-size:.92rem}input{padding:.75rem;border:1px solid var(--color-border);border-radius:var(--radius-small);font:inherit}
 .note{font-size:.85rem;color:var(--color-text-muted);margin:0}.notice{background:#FFF4D6;border:1px solid #F0D58C;border-radius:var(--radius-small);padding:1rem;color:#5a4000}
@@ -47,3 +46,11 @@ dialog{border:0;border-radius:var(--radius-medium);padding:0;width:min(96vw,1500
 
 #c-hor{white-space:pre-line}.card--dark .notice{margin-top:1rem}.card--dark .pdf{background:#fff}.sec--dark .card--dark{margin-bottom:1.5rem}
 @media(max-width:800px){.pdf{display:none}}
+
+.flows{grid-template-columns:minmax(0,1fr)}.flow{min-width:0}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border:1px solid var(--color-border);border-radius:var(--radius-medium);margin:.8rem 0}
+.scroll img{display:block;width:100%;min-width:820px;cursor:zoom-in}
+.hint{display:none;font-size:.85rem;color:var(--color-text-muted);margin:0 0 .8rem}
+body{overflow-x:clip}
+@media(max-width:800px){.hint{display:block}}
+.flow .link{display:block;margin-top:.9rem}
