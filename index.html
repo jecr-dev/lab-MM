@@ -95,11 +95,10 @@
  <div class="card card--dark" id="contrato">
   <h3>Revisa el convenio de afiliación</h3>
   <p>Descarga o consulta el convenio completo antes de decidir. Si tienes dudas, escríbenos.</p>
-  <div id="contrato-ok" hidden>
-   <div class="actions"><a class="btn" id="contrato-ver" target="_blank" rel="noopener">Ver convenio en PDF</a><a class="btn btn--ghost" id="contrato-dl" download>Descargar convenio</a></div>
-   <object id="contrato-obj" type="application/pdf" class="pdf" aria-label="Vista previa del convenio de afiliación"><p>Tu navegador no muestra la vista previa; usa los botones.</p></object>
+  <div id="contrato-ok">
+   <div class="actions"><a class="btn" id="contrato-ver" href="convenio-afiliado-laboratorio-mm.pdf" target="_blank" rel="noopener">Ver convenio en PDF</a><a class="btn btn--ghost" id="contrato-dl" href="convenio-afiliado-laboratorio-mm.pdf" download>Descargar convenio</a></div>
+   <object id="contrato-obj" data="convenio-afiliado-laboratorio-mm.pdf" type="application/pdf" class="pdf" aria-label="Vista previa del convenio de afiliación"><p>Tu navegador no muestra la vista previa; usa los botones.</p></object>
   </div>
-  <p id="contrato-pending" class="notice">El convenio de afiliación está pendiente de incorporación (<code>convenio-afiliado-laboratorio-mm.pdf</code>).</p>
  </div>
  <form id="afil-form" class="form card" novalidate>
   <h3>Solicitar afiliación</h3>
@@ -130,16 +129,18 @@
   <article class="card"><h3>WhatsApp</h3><p id="c-wa">[WHATSAPP]</p><a class="btn btn--wa btn--sm js-wa" href="#contacto" data-msg="Hola, quisiera obtener información sobre los servicios de Laboratorio Dental MM">Abrir WhatsApp</a></article>
   <article class="card"><h3>Teléfono</h3><p id="c-tel">[TELÉFONO]</p></article>
   <article class="card"><h3>Correo</h3><p id="c-mail">[CORREO]</p></article>
-  <article class="card"><h3>Horario</h3><p id="c-hor">[HORARIO]</p></article>
-  <article class="card"><h3>Dirección</h3><p id="c-dir">[DIRECCIÓN]</p></article>
+  <article class="card"><h3>Horario</h3><p id="c-hor">Lunes a viernes: 9:00 a 19:00
+Sábado: 10:30 a 14:30
+Domingo: cerrado</p></article>
+  <article class="card"><h3>Dirección</h3><p id="c-dir">Maestranza 355, Ovalle, Coquimbo</p></article>
  </div>
 </div></section>
 
 <section id="ubicacion" class="sec"><div class="container">
  <h2>Dónde estamos</h2>
- <p id="u-dir" class="lead">[DIRECCIÓN]</p>
- <div id="map-box" class="map"><p class="notice">Mapa pendiente: agrega la dirección real en <code>main.js</code> (CONFIG.direccion).</p></div>
- <p class="actions"><a class="btn" id="map-go" href="#ubicacion" target="_blank" rel="noopener">Cómo llegar</a><a class="btn btn--ghost-dark" id="map-open" href="#ubicacion" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+ <p id="u-dir" class="lead">Maestranza 355, Ovalle, Coquimbo</p>
+ <div id="map-box" class="map"><iframe title="Mapa de ubicación de Laboratorio Dental MM" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Maestranza%20355%2C%20Ovalle%2C%20Coquimbo&output=embed"></iframe></div>
+ <p class="actions"><a class="btn" id="map-go" href="https://www.google.com/maps/dir/?api=1&destination=Maestranza%20355%2C%20Ovalle%2C%20Coquimbo" target="_blank" rel="noopener">Cómo llegar</a><a class="btn btn--ghost-dark" id="map-open" href="https://maps.app.goo.gl/HJHTBjZ5Jo7Q6NF96" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
 </div></section>
 
 <section id="faq" class="sec sec--alt"><div class="container narrow">
@@ -154,7 +155,7 @@
 
 <footer class="foot"><div class="container foot__in">
  <div><img src="logo.png" alt="Laboratorio Dental MM" width="64" height="64"><p>Laboratorio dental al servicio de odontólogos y clínicas. [Descripción por confirmar]</p></div>
- <nav aria-label="Secundaria"><a href="#servicios">Servicios</a><a href="#flujos">Flujos de trabajo</a><a href="#arancel">Arancel</a><a href="#afiliados">Afiliación</a><a id="foot-map" href="#ubicacion" target="_blank" rel="noopener">Google Maps</a></nav>
+ <nav aria-label="Secundaria"><a href="#servicios">Servicios</a><a href="#flujos">Flujos de trabajo</a><a href="#arancel">Arancel</a><a href="#afiliados">Afiliación</a><a id="foot-map" href="https://maps.app.goo.gl/HJHTBjZ5Jo7Q6NF96" target="_blank" rel="noopener">Google Maps</a></nav>
  <p>© <span id="year"></span> Laboratorio Dental MM. Todos los derechos reservados.</p>
 </div></footer>
 

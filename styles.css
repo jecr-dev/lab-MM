@@ -46,3 +46,4 @@ dialog{border:0;border-radius:var(--radius-medium);padding:0;width:min(96vw,1500
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 #c-hor{white-space:pre-line}.card--dark .notice{margin-top:1rem}.card--dark .pdf{background:#fff}.sec--dark .card--dark{margin-bottom:1.5rem}
+@media(max-width:800px){.pdf{display:none}}

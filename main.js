@@ -45,7 +45,7 @@ const pdfBlock = (p, path) => fetch(path, { method: "HEAD" }).then(r => {
   $(`#${p}-obj`).data = path;
   $(`#${p}-ok`).hidden = false; $(`#${p}-pending`).hidden = true;
 }).catch(() => {});
-pdfBlock("arancel", CONFIG.arancelPdf); pdfBlock("contrato", CONFIG.contratoPdf);
+pdfBlock("arancel", CONFIG.arancelPdf);
 
 // Menú móvil
 const burger = $(".burger"), menu = $("#menu");
